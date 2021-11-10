@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/profileFragment2">
+
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="learn.dzaky.portofolio.ui.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/androidFragment2"
+        android:name="learn.dzaky.portofolio.ui.AndroidFragment"
+        android:label="Android"
+        tools:layout="@layout/fragment_android" />
+    <fragment
+        android:id="@+id/experienceFragment2"
+        android:name="learn.dzaky.portofolio.ui.ExperienceFragment"
+        android:label="Experience"
+        tools:layout="@layout/fragment_experience" >
+        <action
+            android:id="@+id/action_experienceFragment2_to_experienceDetailFragment"
+            app:destination="@id/experienceDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/flutterFragment2"
+        android:name="learn.dzaky.portofolio.ui.FlutterFragment"
+        android:label="Flutter"
+        tools:layout="@layout/fragment_flutter" />
+    <fragment
+        android:id="@+id/settingFragment2"
+        android:name="learn.dzaky.portofolio.ui.SettingFragment"
+        android:label="Setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/uiUxFragment"
+        android:name="learn.dzaky.portofolio.ui.UiUxFragment"
+        android:label="UI/UX"
+        tools:layout="@layout/fragment_ui_ux" />
+    <fragment
+        android:id="@+id/experienceDetailFragment"
+        android:name="learn.dzaky.portofolio.ExperienceDetailFragment"
+        android:label="Detail"
+        tools:layout="@layout/fragment_experience_detail" >
+        <argument
+            android:name="experience"
+            app:argType="learn.dzaky.portofolio.data.Portofolio" />
+    </fragment>
+</navigation>
